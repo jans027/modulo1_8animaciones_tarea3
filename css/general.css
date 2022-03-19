@@ -1,0 +1,299 @@
+/* Fuente de letra  */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap');
+
+/*   */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Cabecera Body */
+header{
+    background: #FDFC47;   
+    background: linear-gradient(to right, #24FE41, #FDFC47); 
+    height: auto;
+    padding: 48px;
+    width: 100%;
+}
+
+nav{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.seccionNosotros h2{
+    background-color: #24FE41;
+    text-align: center;
+    border-radius: 25px;
+    margin: 35px 15px;
+}
+
+.contenedor{
+    width: 95%;
+    max-width:1200px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;  
+}
+
+#header img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    width: auto;
+    animation: moverArriba 1s ease-in;
+}
+
+.textos{
+    width: 50%;
+    color: #fff;
+}
+
+.textos h1{
+    font-size: 35px;
+    animation: moverDerecha 1s ease-in;
+}
+
+.textos h2{
+    font-size: 20px;
+    animation: moverIzquierda 1s ease-in;
+}
+
+.textos a{
+    display: inline-block;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 30px;
+    border: 2px solid #fff;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0;
+    animation: moverArriba 1s ease-in;
+}
+.icono{
+    display: block;
+    animation: moverIzquierda 1s ease-in;
+    z-index: 1000;
+	color: #fff;
+}
+.uno{
+    -webkit-clip-path: circle(0% at 0 0);
+    clip-path: circle(0% at 0 0);
+}
+
+
+.wave{
+    height:100px ;
+    width: 100%;
+    background: #FDFC47;  
+    background: -webkit-linear-gradient(to right, #24FE41, #FDFC47);  
+    background: linear-gradient(to right, #24FE41, #FDFC47); 
+}
+.contacto :hover{
+    background-color: #fbfbfb5d;
+}
+.menu a:hover{
+    background: #fbfbfb80;
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 15px;
+
+}
+.menu{
+    float: right;
+    margin-top: 10px;
+    display: block;
+    background-color: #24FE41;
+    border-radius: 15px;
+}
+
+.menu li{
+    list-style: none;
+    float: left;
+    margin: 5px;
+    
+}
+
+.menu li ul{
+    display: none;
+    position: absolute;
+}
+
+.menu li:hover ul{
+    display: block;
+}
+
+.menu li ul li{
+    position: relative;
+}
+
+.menu li ul li ul{
+    height: -145;
+    top:0px;
+    padding: 10px;
+}
+.menuDesplegable{
+    background-color: #24FE41;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+
+
+/* Animaciones */
+@keyframes moverIzquierda{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100%{
+        opacity:1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes moverDerecha{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100%{
+        opacity:1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes moverArriba{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100%{
+        opacity:1;
+        transform: translate(0);
+    }
+}
+@keyframes moverAbajo{
+    0%{
+        opacity: 0;
+        transform: translatey(-100%);
+    }
+
+    100%{
+        opacity:1;
+        transform: translate(0);
+    }
+}
+
+
+@media screen and (max-width:1000px){
+    #header img{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:800px){
+    #header img{
+        height: 370px;
+    }
+
+    .textos h1{
+        font-size: 25px;
+    }
+}
+/* ...................................................................... */
+
+/* formualrio  */
+main{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(233, 243, 243, 0.445);
+    border: 3px solid #a5a2a281;
+    margin: 0 auto;
+    width: 28em;
+    padding: 2em 2em 4em 2em;
+    border-radius: 5px;
+    animation: moverAbajo 1s ease-in;
+}
+input{
+    margin: 5px;
+    margin-top: 15px;
+    padding: 0.3em 0.5em;
+    background-color: rgba(250, 250, 250, 0.493);
+    border: 1px solid cornsilk;
+}
+
+#nombreApellido input{
+    text-align: left;
+    width: 13.2em;
+}
+.full-width{
+    width: 75%;
+}
+#fechaNacimiento input{
+    width: 8.4em;
+
+}
+#correoUsuario input{
+    width: 28em;
+}
+
+#contrasenaUsuario{
+    width: 31em;
+}
+#sexo input{
+    width: 28em;
+}
+#telefonoMovil input{
+    width: 28em;
+}
+#ubicacion input{
+    width: 28em;
+}
+#boton{
+    border: 0em;
+    background-color: #0077b6;
+    color: white;
+    padding: 0.8em;
+    border-radius: 0.2em;
+    float: right;
+    margin: auto;
+    position: inherit;
+}
+#boton:hover{
+    background-color: #0096c7;
+}
+.seccionNosotros{
+    width: 80%;
+    text-align: justify;
+    padding: 25px 35px;
+}
+.tituloNosostros{
+    text-align: center;
+}
+
